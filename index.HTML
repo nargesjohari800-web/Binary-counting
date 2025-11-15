@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary counting</title>
+    <link rel="stylesheet" href="./Binary counting.CSS">
+</head>
+
+<body>
+    <div id="tabs">
+        <button class="tab-btn active" data-tab="base">base conversion</button>
+        <button class="tab-btn" data-tab="calc">Binary calculator</button>
+        <button class="tab-btn" data-tab="char">Convert letters to binary</button>
+        <button class="tab-btn" data-tab="counter">Automatic binary counting</button>
+        <button class="tab-btn" data-tab="rand">Random numbers</button>
+        <button class="tab-btn" data-tab="clock">Binary clock</button>
+    </div>
+
+
+    <!-- Base Converter -->
+    <div id="base" class="tool">
+        <select id="baseFrom"></select>
+        <select id="baseTo"></select>
+        <input id="inputValue" placeholder="number..." />
+        <button id="convertBtn">conversion</button>
+        <div id="resultBase"></div>
+    </div>
+
+    <!-- Calculator -->
+    <div id="calc" class="tool">
+        <input id="calcA" placeholder="number1" />
+        <select id="calcOp">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>%</option>
+            <option>^</option>
+        </select>
+        <input id="calcB" placeholder="number2" />
+        <button id="calcBtn">Calculate</button>
+        <div id="resultCalc"></div>
+    </div>
+
+    <!-- Char to Binary -->
+    <div id="char" class="tool">
+        <input id="charInput" placeholder="Letters..." />
+        <button id="charToBin">conversion</button>
+        <div id="resultChar"></div>
+    </div>
+
+    <!-- Binary Counter -->
+    <div id="counter" class="tool">
+        <div id="counterBtns">
+            <button id="startCount">start</button>
+            <button id="resetCount">reset</button>
+        </div>
+        <div id="digits"></div>
+    </div>
+
+
+    <!-- Random Number Generator -->
+    <div id="rand" class="tool">
+        <input id="randMin" placeholder="Min." type="number" />
+        <input id="randMax" placeholder="Maximum" type="number" />
+        <select id="randCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">2</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button id="randBtn">Generate numbers</button>
+        <div id="resultRand" style="display:flex;gap:5px;flex-wrap:wrap;"></div>
+    </div>
+
+    <!-- Binary Clock -->
+    <div id="clock" class="tool">
+        <div id="binaryClock">
+            <div>hour: <div class="bitsRow" id="hourBits"></div>
+            </div>
+            <div>minutes: <div class="bitsRow" id="minuteBits"></div>
+            </div>
+            <div>seconds: <div class="bitsRow" id="secondBits"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./Binary counting.JS"></script>
+</body>
+</html>
