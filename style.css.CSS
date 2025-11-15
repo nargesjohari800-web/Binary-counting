@@ -1,0 +1,206 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #000;
+    color: #0ff;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#tabs {
+    display: flex;
+    gap: 15px;
+    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: 1px solid #0ff;
+    background: #111;
+    color: #0ff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#counterBtns {
+    display: flex;
+    gap: 10px;
+}
+
+.active {
+    background: #0ff;
+    color: #000;
+}
+
+.tool {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    /* background: rgba(0, 255, 255, 0.05); */
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input,
+button,
+select {
+    padding: 10px;
+    background: #111;
+    border: 1px solid #0ff;
+    color: #0ff;
+    border-radius: 8px;
+}
+
+#digits {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flip-container {
+    perspective: 1000px;
+}
+
+.flip-card {
+    position: relative;
+    width: 60px;
+    height: 90px;
+    background: #111;
+    color: #0ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff inset;
+    line-height: 90px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 2rem;
+}
+
+.top,
+.bottom,
+.flip-top,
+.flip-bottom {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+.top {
+    top: 0;
+    height: 100%;
+}
+
+.bottom {
+    bottom: 0;
+    height: 50%;
+    visibility: hidden;
+}
+
+.flip-top {
+    top: 0;
+    height: 50%;
+    transform-origin: bottom;
+    visibility: hidden;
+}
+
+.flip-bottom {
+    bottom: 0;
+    height: 50%;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    visibility: hidden;
+}
+
+.animate .flip-top {
+    visibility: visible;
+    animation: flipTop .35s forwards;
+}
+
+.animate .flip-bottom {
+    visibility: visible;
+    animation: flipBottom .35s forwards;
+}
+
+@keyframes flipTop {
+    0% {
+        transform: rotateX(0)
+    }
+
+    100% {
+        transform: rotateX(-90deg)
+    }
+}
+
+@keyframes flipBottom {
+    0% {
+        transform: rotateX(90deg)
+    }
+
+    100% {
+        transform: rotateX(0)
+    }
+}
+
+@media(max-width:600px) {
+    .tool {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .flip-card {
+        width: 50px;
+        height: 75px;
+        font-size: 1.8rem;
+        line-height: 75px;
+    }
+
+    .tab-btn,
+    input,
+    button,
+    select {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+#binaryClock {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bitsRow {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+/*  */
